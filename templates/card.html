@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    {% load static %}
+    <style>
+      body{
+        background: url(https://img.freepik.com/premium-photo/blurred-interior-public-library-with-wooden-tables_32485-382.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .container{
+        background-color: rgba(255,255,255,0.6);
+        height: 95%;
+        width: 35%;
+        padding: 25px 25px 25px 25px;
+        margin-left: 35%;
+        margin-top: 2%;
+        border-radius: 10px;
+        margin-bottom: 2%;
+    }
+    
+    </style>
+    
+</head>
+<body>
+          
+  <section class="vh-100" >
+    <div class="container">
+
+      <div class="row">
+
+          <div class="col-md-6 mb-4 d-flex align-items-center">
+
+              <div class="form-group">
+                <img src="{{tr.img.url}}" alt="profilepic" class="img-fluid my-5" style="width: 100px;height: 100px; margin-left: 20px;" />
+              </div>
+
+          </div>
+
+          <div class="col-md-6 mb-4 d-flex align-items-center">
+
+              <div class="form-group">
+                <h5 style="color: red; font-family: 'poppins';font-weight: bold;font-size: 40px;margin-left: 20px;">{{tr.user.username}}</h5>
+                <p style="color: black;margin-left: 20px;">{{tr.course.course_name}}</p>
+                <hr>
+              </div>
+              
+          </div>
+      
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+            <div class="form-group" style="margin-left: 25px;font-family: poppins;">
+              <h5 style="font-weight: bold;font-size: 25px">First Name</h5>
+              <p>{{tr.user.first_name}}</p> 
+            </div>
+
+        </div>
+
+        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+            <div class="form-group">
+              <h5 style="font-weight: bold;font-size: 25px;font-family: poppins;">Last Name</h5>
+              <p>{{tr.user.last_name}}</p>
+            </div>
+            
+        </div>
+    
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+            <div class="form-group" style="margin-left: 25px;font-family: poppins;">
+              <h5 style="font-weight: bold;font-size: 25px;">Location</h5>
+              <p>{{tr.address}}</p>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+            <div class="form-group">
+              <h5 style="font-weight: bold;font-size: 25px;font-family: poppins;">Contact</h5>
+              <p>{{tr.phone}}</p>
+            </div>
+            
+        </div>
+    
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6 mb-4 d-flex align-items-center" >
+
+            <div class="form-group"style="margin-left: 25px;font-family: poppins;">
+              <h5 style="font-weight: bold;font-size: 25px;">Age</h5>
+              <p>{{tr.age}}</p>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+            <div class="form-group" style="font-family: poppins;">
+              <h5 style="font-weight: bold;font-size: 25px;font-family: poppins;">Email</h5>
+              <p>{{tr.user.email}}</p>
+            </div>
+            
+        </div>
+    
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" style="background-color: black;text-align: center;padding: 5px 5px 5px 5px; border-radius: 5px; margin-top: 8px;margin-right:15px; width: 120px;"><a href="{% url 'goback' %}" style="color: white;text-decoration: none;">Go Back</a></button>
+
+        <button type="submit" style="background-color: black;text-align: center;padding: 5px 5px 5px 5px; border-radius: 5px; margin-top: 8px;margin-left: 15px;width: 120px;"><a href="{% url 'logout' %}" style="color: white;text-decoration: none;">LogOut</a></button>
+      </div>
+
+            
+
+            
+
+        
+      
+    </div>
+  </section>
+
+          
+        
+    
+
+
+
+
+
+
+    
+
+                     
+</body>
+</html>

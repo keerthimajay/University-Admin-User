@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registeration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+ 
+    body{
+        background: url(https://images.unsplash.com/photo-1520970014086-2208d157c9e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+    }
+    a{
+        font-family: 'poppins';
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    .form-container{
+        background-color: white;
+        height: 40%;
+        width: 30%;
+        padding: 30px 30px 30px 30px;
+        margin-left: 35%;
+        margin-top: 3%;
+        border-radius: 10px;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 2.1;
+        margin-bottom: 30px;
+        font-family: 'poppins';
+    }
+
+    .btn{
+        color: white;
+        background-color: rgb(64, 138, 162);
+        padding: 5px 5px 5px 5px;
+        width: 180px;
+        text-align: center;
+        margin-left: 30%;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+    span{
+        color: red;
+    }
+    a:hover{
+        text-decoration: none;
+        color: lightsalmon;
+    }
+    .btn a:hover{
+        text-decoration: none;
+    }
+    
+
+
+    </style>
+</head>
+<body>
+
+    
+     
+
+    
+    <div class="addteacher">
+        <div class="form-container">
+
+                <form action="{% url 'add_teacher' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h2 class="text-center" style="font-family: 'poppins';"><strong> <span>TEACHER</span> Registeration</strong></h2>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="fname" placeholder="First Name">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="lname" placeholder="Last Name">
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="address" placeholder="Address">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="age" placeholder="Age">
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="email" placeholder="Email">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="phone" placeholder="Phone Number">
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="date" name="doj" placeholder="Date">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="username" placeholder="Username">
+                            </div>
+
+                        </div>
+                       
+                    
+                    </div>
+
+                    <div class="row">
+
+                        
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="password" placeholder="Password">
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="cpassword" placeholder="Confirm Password">
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                            <div class="form-group">
+
+                                <select name="sel" style=" height: 38px;  border-radius: 6px; width: 185px;" aria-placeholder="Course">
+                                    {% for c in pr %}
+                                    <option value=""></option>
+                                    <option value="{{c.id}}">{{c.course_name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-group">
+                                <input class="form-control" type="file" accept="image/*" name="image" >
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+
+
+                    <div class="form-group">
+                        <button class="btn " type="submit">Add</button>
+                    </div>
+                </form>
+               
+        </div>
+
+</body>
+</html>

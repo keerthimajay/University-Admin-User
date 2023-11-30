@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome User</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% load static %}
+    <style>
+        body{
+            background: url(https://images.unsplash.com/photo-1574330096374-a263e0a4b7f8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+        }
+        h1{
+            color: black;
+            font-family: 'poppins';
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+    <h1>WELCOME 
+        <span style="color: red; font-family: 'poppins';font-size: 50px;">{{ user.username}}</span> 
+    </h1>
+
+   <a href="{% url 'card' %}"><img src="{% static 'images/user.png' %}" alt="" style="width: 250px;height: 250px;padding: 25px 25px 25px 25px;margin: 80px 50px 30px 30px;position: absolute;left: 120px;margin-left: 300px;"><br>
+    <h4 style="position: absolute;left: 220px; margin-top: 290px; color: black;font-family: 'poppins';font-size: 25px;margin-left: 270px; ">View Profile</h4>
+    </a>
+    
+    <a href="{% url 'updateteacher' %}"><img src="{% static 'images/edituser.png' %}" alt="" style="width: 270px;height: 280px;padding: 25px 25px 25px 25px;margin: 80px 120px 30px 100px;position: absolute;right: 100px;margin-right: 300px;margin-top: 55px;"><br>
+        <h4 style="position: absolute;right: 280px; margin-top: 270px; color: black;font-family: 'poppins';font-size: 25px;margin-right: 200px; ">Edit Profile</h4>
+    </a>
+
+    
+    <button type="submit" style="background-color: black;text-align: center;padding: 5px 5px 5px 5px; border-radius: 5px; margin-top: 390px;width: 120px;margin-left: 750px;"><a href="{% url 'logout' %}" style="color: white;text-decoration: none;">LogOut</a></button>
+    
+
+</body>
+</html>
